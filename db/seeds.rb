@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Faker::Games::WorldOfWarcraft.hero
+
+for i in 1..20
+    name = Faker::Games::WorldOfWarcraft.hero
+    Player.create(name: name)
+    puts "Created player #{i} at #{Time.now}"
+end
